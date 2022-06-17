@@ -56,7 +56,7 @@ The user must be able to put the answer to the open gap field using two options:
 - drag the answer and drop it into the open gap field  
 - click on the answer and then click on the field that he wants to put in.
 
-All other parts (like you need to be able to deselect an answer or the already selected answer must be inactive) 
+All other parts (like you need to be able to deselect an answer or the already selected answer must be inactive at the bottom panel) 
 are intuitively clear from this image.
 <img width="800" alt="Create a new project" src="docs/Task.jpg">
 
