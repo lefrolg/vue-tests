@@ -1,0 +1,299 @@
+/**
+* 1. Page header
+* 2. Site notice
+* 3. Test text area
+* 4. Answer insert
+* 5. Available answers
+ */
+
+.container {
+    max-width: 1470px;
+    padding: 0 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**
+*1. Page header
+ */
+.site-header {
+    background-color: #ffffff;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.05);
+}
+
+.site-header__progress {
+    background-color: rgba(27, 153, 139, 0.2);
+    width: 100%;
+    height: 8px;
+    position: relative;
+}
+.site-header__progress-bar {
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #1b998b;
+}
+
+.site-header__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 21px 0;
+}
+
+.site-header__actions {
+    margin-left: auto;
+}
+
+.site-button {
+    background-color: #0872ba;
+    color: #fff;
+    border-radius: 8px;
+    padding: 19px 22px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1;
+    font-family: "Archivo", sans-serif;
+}
+
+.site-button:active,
+.site-button:hover {
+    opacity: 0.8;
+}
+
+.site-header__title {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 45px;
+    letter-spacing: 0.3px;
+    color: #212831;
+}
+
+.site-content {
+    padding-top: 50px;
+}
+
+@media (max-width: 1000px) {
+    .site-content {
+        padding-top: 40px;
+    }
+}
+
+/**
+*   2. Site notice
+ */
+
+.site-notice {
+    font-family: "Hind", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    padding-left: 68px;
+    color: rgba(18, 18, 18, 0.75);
+
+    position: relative;
+
+    margin-bottom: 50px;
+}
+
+.site-notice:before {
+    content: "";
+    background: url("~@/assets/images/inform.svg");
+    left: 0;
+    top: 5px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+}
+
+@media (max-width: 100px) {
+    .site-notice {
+        margin-bottom: 60px;
+    }
+}
+
+/**
+* 3. Test text area
+ */
+.test {
+    background: #ffffff;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 40px rgba(1, 33, 54, 0.05);
+    padding: 45px 0;
+    border-radius: 25px 25px 0 0;
+}
+
+
+.test__text {
+    font-family: "Hind", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 356.5%;
+
+    letter-spacing: 0.346154px;
+
+    color: #121212;
+    padding: 0 66px 25px;
+}
+
+@media (max-width: 1000px) {
+    .test {
+        padding-top: 55px;
+    }
+    .test__text {
+        padding: 0 50px 25px;
+    }
+}
+
+/**
+* 4. Answer insert
+ */
+
+.text__insert {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    color: #1b998b;
+    padding: 20px 70px;
+    background: url("~@/assets/images/insert.svg") no-repeat center center;
+    display: inline-block;
+    min-height: 46px;
+    position: relative;
+    top: 15px;
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+.text__insert.text__insert--focus {
+    border: 1px solid #1b998b;
+    background-image: url("~@/assets/images/insert-gray.svg");
+}
+
+.text__insert.text__insert--defined {
+    background: #1b998b;
+    border-radius: 10px;
+    font-family: "Hind", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    padding: 7px 50px;
+    top: 0;
+    color: #ffffff;
+}
+
+.text__insert.text__insert--defined .remove {
+    position: absolute;
+    cursor: pointer;
+    top: -15px;
+    right: -15px;
+    background: url("~@/assets/images/close.svg") no-repeat;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+
+.text__words {
+    padding: 80px 66px 0;
+    background-image: linear-gradient(to right, #babacc 60%, transparent 0%);
+    background-position: top;
+    background-size: 15px 1px;
+    background-repeat: repeat-x;
+    background-color: #fff;
+}
+
+/**
+* 5. Available answers
+ */
+
+.words {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.words__wrap {
+    margin: 0 60px 50px;
+    text-align: center;
+}
+
+.words__wrap:nth-child(1),
+.words__wrap:nth-child(5n) {
+    margin-left: 0;
+}
+
+.words__wrap:nth-child(4n) {
+    margin-right: 0;
+}
+
+.words__one {
+    background: #1b998b;
+    border-radius: 10px;
+    min-width: 170px;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 0 9px;
+    font-family: "Hind", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+@media (max-width: 1260px) {
+    .words__wrap {
+        margin: 0 30px 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .words {
+        padding: 45px 55px;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .words__wrap,
+    .words__wrap:nth-child(1),
+    .words__wrap:nth-child(5n),
+    .words__wrap:nth-child(4n) {
+        margin: 0 10px 30px;
+        text-align: center;
+    }
+    .words__one {
+        min-width: 135px;
+    }
+}
+
+.chosen-answer .words__one {
+    cursor: alias;
+}
+
+.words__one.disabled {
+    background: rgba(30, 165, 154, 0.2);
+    border: 1px solid rgba(30, 165, 154, 0.6);
+    border-radius: 10px;
+    color: rgba(30, 165, 154, 0.4);
+    pointer-events: none;
+}
